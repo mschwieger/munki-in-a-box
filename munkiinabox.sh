@@ -194,12 +194,12 @@ if
 
 # Installing the Xcode command line tools on 10.7.x through 10.10.x
  
-osx_vers=$(sw_vers -productVersion | awk -F "." '{print $2}')
+#osx_vers=$(sw_vers -productVersion | awk -F "." '{print $2}')
 cmd_line_tools_temp_file="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
  
 # Installing the latest Xcode command line tools on 10.9.x or 10.10.x
  
-	if [[ "$osx_vers" -ge 9 ]] ; then
+	if [[ "$osvers" -ge 9 ]] ; then
  
 	# Create the placeholder file which is checked by the softwareupdate tool 
 	# before allowing the installation of the Xcode command line tools.
